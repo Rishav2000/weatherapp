@@ -132,7 +132,7 @@
           "<i class='fas  fa-cloud' style='color: #f1f2f6;'></i>"
       } else if (tempStatus == "Rain") {
         weathercon.innerHTML =
-          "<i class='fas  fa-cloud-showers-heavy' style='color: #a4b0be;' ></i>";
+          "<i class='fas  fa-cloud-rain' style='color: #a4b0be;' ></i>";
       } else if(tempStatus == "Haze" || tempStatus == "Fog"){
         weathercon.innerHTML =    
         "<i class='fas fa-smog' style='color: #f1f2f6;'></i>"
@@ -150,27 +150,14 @@
         let date = currentTime.getDate();
         let today = weekDay[currentTime.getDay()] + " ||  " + months[month] + ", " +date;
         return today;
-      };
-      const getCurrentTime = ()=>{
-        
+      }
+
+        let myVar= setInterval(() => {
         let now = new Date();
-        
-        let hours = now.getHours();
-        let mins = now.getMinutes();
+        let time = now.toLocaleTimeString();
+        clock.innerHTML = time;
 
-        let period = "AM";
-        if(hours>11){
-          period = "PM";
-          if(hours>12) hours-= 12;
-        }
-        if(mins<10){
-          mins = "0" + mins;
-        }
-
-        let time = hours + ":" + mins + " " + period;
-        return time;
-      };
-      clock.innerHTML = getCurrentTime();
+      }, 1000);
       curDate.innerHTML = getCurrentDay();
 
 
