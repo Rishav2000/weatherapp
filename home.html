@@ -85,9 +85,15 @@
         padding-top: 15px;
         text-shadow: 1px 1px grey;
       }
+      .feels{
+        text-align: center;
+        text-shadow:  2px 2px grey;
+        text-transform:capitalize;
+        color:white;
+      }
       .minmax{
         text-align: center;
-        text-shadow: 2px 2px 5px grey;
+        text-shadow: 1px 1px grey;
         padding-top: 20px;
       }
         
@@ -101,6 +107,7 @@
           <i class="fas fa-street-view" style="color: #fff"></i
           >{%location%},{%country%}
         </h2>
+        <div id="curDate"></div>
         <div id="clock"></div>
        </div>
        <div id="weathercon">
@@ -108,10 +115,11 @@
         
       </div>
       <h2 class="cond">{%tempval%}&deg;C, {%weatherstatus%}</h2>
-      <div id="curDate"></div>
+      <h6 class="feels">Feels Like: {%feelslike%}&deg;C</h6>
+      
 
       <div class=minmax>
-        Min<i class="fas fa-arrow-down"></i>: {%tempmin%}&deg;C &nbsp;&nbsp;  ||  &nbsp;&nbsp;    Max<i class="fas fa-arrow-up"></i>:  {%tempmax%}&deg;C
+        Pressure: {%pressure%}mbar &nbsp;  ||  &nbsp;    Humidity: {%humidity%}%
       </div>
       
     </div>

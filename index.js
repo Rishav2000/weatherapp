@@ -11,6 +11,7 @@ const replaceVal = (tempVal, originalVal) => {
   let temperature= tempVal.replace("{%tempval%}",Math.round(originalVal.main.temp))
   temperature= temperature.replace("{%tempmin%}",Math.round(originalVal.main.temp_min));
   temperature= temperature.replace("{%tempmax%}",Math.round(originalVal.main.temp_max));
+  temperature= temperature.replace("{%feelslike%}",Math.round(originalVal.main.feels_like));
   temperature= temperature.replace("{%pressure%}",originalVal.main.pressure);
   temperature= temperature.replace("{%humidity%}",originalVal.main.humidity);
   temperature= temperature.replace("{%location%}",originalVal.name);
