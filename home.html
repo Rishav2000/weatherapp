@@ -45,7 +45,7 @@
         .place h2{
            
           padding-top: 20px;
-          padding-bottom: 15px;
+          padding-bottom: 10px;
           font-weight: bold;
           font-size: 35px;
           text-shadow:  2px 2px grey;
@@ -104,8 +104,8 @@
     <div class="box">
        <div class="place">
         <h2>
-          <i class="fas fa-street-view" style="color: #fff"></i
-          >{%location%},{%country%}
+          <i class="fas fa-map-marked-alt" style="color:#fff"></i
+          > {%location%},{%country%}
         </h2>
         <div id="curDate"></div>
         <div id="clock"></div>
@@ -140,7 +140,7 @@
           "<i class='fas  fa-cloud' style='color: #f1f2f6;'></i>"
       } else if (tempStatus == "Rain") {
         weathercon.innerHTML =
-          "<i class='fas  fa-cloud-rain' style='color: #a4b0be;' ></i>";
+          "<i class='fas  fa-umbrella' style='color: #375d8a;' ></i>";
       } else if(tempStatus == "Thunderstorm"){
         weathercon.innerHTML = "<i class='fas fa-cloud-showers-heavy' style='color:deepblue'></i>";
       }
